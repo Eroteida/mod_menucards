@@ -1,0 +1,16 @@
+<updates>
+    <update>
+        <name>Menucards</name>
+        <description>This is mod_menucards 1.0.1</description>
+        <element>mod_menucards</element>
+        <type>module</type>
+        <version>1.0.1</version>
+        <downloads>
+            <downloadurl type="full" format="zip">https://joomla00.aemet.es/ww54/scripts/mod_menucards_101.zip</downloadurl>
+        </downloads>
+        <maintainer>AEMET</maintainer>
+        <maintainerurl>http://www.aemet.es</maintainerurl>
+        <targetplatform name="joomla" version="4.0"/>
+        <client>site</client>
+    </update>
+</updates>

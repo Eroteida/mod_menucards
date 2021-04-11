@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="4.0" client="site" method="upgrade">
+    <name>MOD_MENUCARDS</name>
+    <creationDate>17/03/2021</creationDate>
+    <author>Eroteida Sánchez García</author>
+    <authorEmail>esanchezg@aemet.es</authorEmail>
+    <authorUrl>www.aemet.es</authorUrl>
+    <copyright>© AEMET</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0</version>
+    <description>Módulo para crear items de menú tipo card</description>
+    <namespace>AEMet\Module\Menucards</namespace>
+    <scriptfile>script.php</scriptfile>
+    <files>
+        <filename module="mod_menucards">mod_menucards.php</filename>
+        <folder>tmpl</folder>
+        <folder>Helper</folder>
+        <folder>language</folder>
+        <filename>mod_menucards.xml</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+				<field name="tdisposicion" type="radio" default="tgrid" label="Tipo de disposición" description="Se muestra como lista o cards en grid">
+					<option value="tgrid">Grid</option>
+					<option value="tlist">Lista</option>
+				</field>
+				<field name="backgroundcolor" type="color" default="#eee" format="rgba" label="Color de fondo" description="Selecciona un color para el botón" />
+                <field name="cards" type="subform" label="Crear cards como item de menu" description="Creación de cards" multiple="true">
+					<form>
+						<field required="true"
+							name="title"
+							type="text"
+							label="Título"
+						/>
+						<field 
+							name="imagen"
+							type="media"
+							label="Imagen"
+							
+						/>
+						<field 
+							name="contenido"
+							type="textarea"
+							label="Contenido"
+							cols="40"
+							rows="8"
+						/>
+						<field 
+							name="url_item"
+							type="url"
+							label="URL Item"
+						/>
+					</form>
+				</field>
+			</fieldset>
+            <fieldset name="gridbs5" label="GRIB BS5">
+                <field name="ncolslg" type="integer" default="4" label="Nº de cards por fila para pantallas grandes" description="Nº de columnas para el grid BS5" first="1" last="12" step="1"></field>
+				<field name="ncolsmd" type="integer" default="2" label="Nº de cards por fila para pantallas medianas" description="Nº de columnas para el grid BS5" first="1" last="12" step="1"></field>
+				<field name="ncolssm" type="integer" default="2" label="Nº de cards por fila para pantallas pequeñas" description="Nº de columnas para el grid BS5" first="1" last="12" step="1"></field>				
+			</fieldset>
+        </fields>
+    </config>
+</extension>
